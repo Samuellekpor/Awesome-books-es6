@@ -1,5 +1,6 @@
 import {Books} from './modules/books.js';
 import {displayBook} from './modules/display.js';
+import {DateTime} from './modules/luxon.js';
 
 const addBtn = document.querySelector('.add-btn');
 const titleInput = document.querySelector('#title');
@@ -41,7 +42,7 @@ removeButton.forEach((btn) => {
   });
 });
 
-const theDate = new Date().toUTCString();
+const theDate = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
 
 const dateDiv = document.querySelector('.date');
 dateDiv.innerHTML = theDate;

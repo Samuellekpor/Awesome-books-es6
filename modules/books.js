@@ -5,7 +5,7 @@ export class Books {
     this.books = [];
   }
 
-  add(title, author) {
+  add = (title, author) => {
     const book = new Book(title, author);
     this.books.push(book);
     return book;
@@ -19,7 +19,7 @@ export class Books {
     return this.books;
   }
 
-  remove(obj) {
+  remove = (obj) => {
     let localBooks = JSON.parse(localStorage.getItem('books'));
     localBooks = localBooks.filter((b) => b.title !== obj.title || b.author !== obj.author);
     localStorage.setItem('books', JSON.stringify(localBooks));
