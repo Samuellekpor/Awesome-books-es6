@@ -1,6 +1,6 @@
-import {Books} from './modules/books.js';
-import {displayBook} from './modules/display.js';
-import {DateTime} from './modules/luxon.js';
+import Books from './modules/books.js';
+import displayBook from './modules/display.js';
+import { DateTime } from './modules/luxon.js';
 
 const addBtn = document.querySelector('.add-btn');
 const titleInput = document.querySelector('#title');
